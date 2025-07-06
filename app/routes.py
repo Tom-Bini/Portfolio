@@ -25,4 +25,3 @@ def about():
 def contact():
     return render_template("contact.html")
 
-# etc. pour /skills, /projects, etc.

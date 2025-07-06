@@ -1,0 +1,44 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #fff;
+    background-image: 
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 40 40'><path fill='none' stroke='%23ccc' stroke-width='0.4' d='M0 0H40V40H0z M0 40V0 M40 0V40 M20 0V40 M0 20H40'/></svg>");
+    background-repeat: repeat;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin-top: 10px;
+}
+
+.nav_container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    border: 1px solid #787878;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+    display: inline-block;
+    color: black;
+    background-color: #7AE582;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 10px;
+}
