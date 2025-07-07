@@ -24,6 +24,10 @@ header {
   text-align: center;
 }
 
+main {
+    margin-top: 100px;
+}
+
 nav a {
     color: #EDEDED;
     margin: 0 15px;
@@ -31,12 +35,12 @@ nav a {
     font-weight: 500;
 }
 
-nav a:not(.rouplou):hover{
+nav a:not(.bold):hover{
     text-decoration: underline;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 600px;
     margin: 60px auto;
     padding: 0 20px;
 }
@@ -49,6 +53,8 @@ h1 {
 p {
     font-size: 15px;
     color: #EDEDED;
+    text-align: justify;
+    line-height: 1.8;
 }
 
 a .house {
@@ -61,13 +67,14 @@ a:hover .house {
     transform: rotate(20deg);
 }
 
-a.rouplou {
+.bold {
     font-weight: bold;
 }
 
 p.footer {
     font-size: 10px;
     margin: 30px;
+    text-align: center;
 }
 
 a.portfolio_button {
@@ -87,6 +94,36 @@ a.portfolio_button:hover {
 }
 
 .portfolio_button_container {
-  text-align: center;
-  margin-top: 30px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer {
+    margin-top: 60px;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 13px;
+}
+
+footer .social-links {
+    margin-bottom: 10px;
+}
+
+footer .social-links a {
+    margin: 0 10px;
+    color: #EDEDED;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #B6F758;
+}
+
+section.mini-bio {
+    margin-top: 20px;
+}
+
+a.uliege {
+    color: #EDEDED;
 }
