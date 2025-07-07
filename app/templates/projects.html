@@ -4,5 +4,17 @@
 {% block title %}Projects{% endblock %}
 
 {% block content %}
-<a href="https://personnal-money-tracker.be">Tracker Homemade</a>
+<h1>Projects</h1>
+
+<div class="project-grid">
+  {% for project in projects %}
+  <a href="/projects/{{ project.slug }}" class="project-thumb">
+    <img src="{{ url_for('static', filename='images/' + project.image) }}" alt="{{ project.title }}">
+    <div class="project-info">
+      <h2>{{ project.title }}</h2>
+      <p>{{ project.short }}</p>
+    </div>
+  </a>
+  {% endfor %}
+</div>
 {% endblock %}

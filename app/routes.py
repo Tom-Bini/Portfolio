@@ -1,5 +1,7 @@
 from app import app
 from flask import render_template
+from projects import projects
+
 
 @app.route("/")
 def index():
@@ -21,3 +23,10 @@ def music():
 def contact():
     return render_template("contact.html")
 
+@app.route('/projects/<slug>')
+def project_detail(slug):
+    project = get_project_by_slug(slug)  # fonction à toi
+    if project:
+        return render_template("project_detail.html", project=project)
+    else:
+        abort(404)
