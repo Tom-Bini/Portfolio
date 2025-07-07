@@ -6,29 +6,28 @@
     <title>{% block title %}Mon Portfolio{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
-        <div class="nav_container">
             <nav>
-                <a href="/">Home</a>
-                <a href="/skills">Skills</a>
-                <a href="/projects">Projects</a>
-                <a href="/music">Music</a>
-                <a href="/about">About me</a>
-                <a href="/contact">Contact</a>
+                <a href="/" class="rouplou"><span class="house">⌂</span> Rouplou</a>
+                <a href="/skills" class="nav">Skills</a>
+                <a href="/projects" class="nav">Projects</a>
+                <a href="/music" class="nav">Music</a>
+                <a href="/about" class="nav">About me</a>
+                <a href="/contact" class="nav">Contact</a>
             </nav>
-        </div>
     </header>
 
     <main>
-        {% block content %}{% endblock %}
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 - Rouplou</p>
+        <p class="footer">&copy; 2025 - Rouplou</p>
     </footer>
 
 </body>
