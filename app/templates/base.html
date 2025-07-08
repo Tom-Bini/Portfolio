@@ -1,4 +1,6 @@
 <!-- app/templates/base.html -->
+
+{% set current_path = request.path %}
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -9,16 +11,19 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
+
     <body>
 
         <header>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
                 <nav>
-                    <a href="/" class="bold"><span class="house">⌂</span> Rouplou</a>
-                    <a href="/skills" class="nav">Skills</a>
-                    <a href="/projects" class="nav">Projects</a>
-                    <a href="/music" class="nav">Music</a>
-                    <a href="/contact" class="nav">Contact</a>
+                <a href="/" class="{% if request.path == '/' %}active{% endif %} bold"><span class="house">⌂</span> Rouplou</a>
+                <a href="/skills" class="{% if 'skills' in request.path %}active{% endif %}">Skills</a>
+                <a href="/projects" class="{% if 'projects' in request.path %}active{% endif %}">Projects</a>
+                <a href="/music" class="{% if 'music' in request.path %}active{% endif %}">Music</a>
+                <a href="/contact" class="{% if 'contact' in request.path %}active{% endif %}">Contact</a>
                 </nav>
+
         </header>
 
         <main>
@@ -36,6 +41,10 @@
             </div>
             <p class="footer">© 2025 - Rouplou</p>
         </footer>
-
+        <script>
+            function toggleMenu() {
+            document.querySelector('nav').classList.toggle('active');
+            }
+        </script>
     </body>
 </html>
