@@ -1,6 +1,12 @@
 from app import app
 from flask import render_template
-from projects import projects
+from app.projects import projects
+
+def get_project_by_slug(slug):
+    for project in projects:
+        if project["slug"] == slug:
+            return project
+    return None
 
 
 @app.route("/")
@@ -12,8 +18,8 @@ def skills():
     return render_template("skills.html")
 
 @app.route("/projects")
-def projects():
-    return render_template("projects.html")
+def projects_page():
+    return render_template("projects.html", projects=projects)
 
 @app.route("/music")
 def music():
@@ -23,10 +29,9 @@ def music():
 def contact():
     return render_template("contact.html")
 
-@app.route('/projects/<slug>')
+@app.route("/projects/<slug>")
 def project_detail(slug):
-    project = get_project_by_slug(slug)  # fonction à toi
-    if project:
-        return render_template("project_detail.html", project=project)
-    else:
-        abort(404)
+    project = get_project_by_slug(slug)
+    if not project:
+        return "Project not found", 404
+    return render_template("project_detail.html", project=project)
