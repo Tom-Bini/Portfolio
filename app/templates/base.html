@@ -17,13 +17,14 @@
         <header>
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
                 <nav>
-                <a href="/" class="{% if request.path == '/' %}active{% endif %} bold"><span class="house">⌂</span> Rouplou</a>
-                <a href="/skills" class="{% if 'skills' in request.path %}active{% endif %}">Skills</a>
-                <a href="/projects" class="{% if 'projects' in request.path %}active{% endif %}">Projects</a>
-                <a href="/music" class="{% if 'music' in request.path %}active{% endif %}">Music</a>
-                <a href="/contact" class="{% if 'contact' in request.path %}active{% endif %}">Contact</a>
+                    <a href="{{ url_for('index') }}" class="{% if request.path == url_for('index') %}active{% endif %} bold">
+                        <span class="house">⌂</span> Rouplou
+                    </a>
+                    <a href="{{ url_for('skills') }}" class="{% if request.path.startswith(url_for('skills')) %}active{% endif %}">Skills</a>
+                    <a href="{{ url_for('projects_page') }}" class="{% if request.path.startswith(url_for('projects_page')) %}active{% endif %}">Projects</a>
+                    <a href="{{ url_for('music') }}" class="{% if request.path.startswith(url_for('music')) %}active{% endif %}">Music</a>
+                    <a href="{{ url_for('contact') }}" class="{% if request.path.startswith(url_for('contact')) %}active{% endif %}">Contact</a>
                 </nav>
-
         </header>
 
         <main>
