@@ -31,16 +31,5 @@ projects = [
         The chassis is fully 3D-printed, and the device includes dual screens,
         a working keyboard, custom power wiring, and internal soldering. Lightweight, portable, and made from scratch.""",
         "tags": ["3D Printing", "Soldering", "PC Building", "Prototyping"]
-    },
-    {
-        "slug": "coucou",
-        "title": "Coucou",
-        "image": "homemade-laptop.jpg",
-        "short": "A fully DIY laptop with 3D-printed frame and dual-screen setup.",
-        "description": """I designed and built this laptop around a Raspberry Pi 400.
-        The chassis is fully 3D-printed, and the device includes dual screens,
-        a working keyboard, custom power wiring, and internal soldering. Lightweight, portable, and made from scratch.""",
-        "tags": ["3D Printing", "Soldering", "PC Building", "Prototyping"]
     }
-    
 ]
