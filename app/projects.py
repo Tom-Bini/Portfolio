@@ -31,5 +31,16 @@ projects = [
         The chassis is fully 3D-printed, and the device includes dual screens,
         a working keyboard, custom power wiring, and internal soldering. Lightweight, portable, and made from scratch.""",
         "tags": ["3D Printing", "Soldering", "PC Building", "Prototyping"]
+    },
+    {
+        "slug": "hybralerte",
+        "title": "Hybra Tool    ",
+        "image": "hybralerte.png",
+        "short": "A tool made to assist people farming Hybra",
+        "description": """I built this tool because I needed it at a first time, then I shared it to some people and it became a 
+        bit viral and I had like 20 users just in a few days. It can alert people with a sound when their LP go out of range, 
+        it helps them finding the best pool to print points and it can show some graphs of their progression in term of points, rank, 
+        competitivity and top 1000 cumulated points. This project is self hosted on a raspberry pi, the same as this website !""",
+        "tags": ["API handling", "Javascript", "Flask", "SQLite", "Crypto", "Devops"]
     }
 ]
