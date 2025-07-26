@@ -34,13 +34,15 @@ projects = [
     },
     {
         "slug": "hybralerte",
-        "title": "Hybra Tool    ",
+        "title": "Hybra Tool",
         "image": "hybralerte.png",
         "short": "A tool made to assist people farming Hybra",
         "description": """I built this tool because I needed it at a first time, then I shared it to some people and it became a 
         bit viral and I had like 20 users just in a few days. It can alert people with a sound when their LP go out of range, 
         it helps them finding the best pool to print points and it can show some graphs of their progression in term of points, rank, 
         competitivity and top 1000 cumulated points. This project is self hosted on a raspberry pi, the same as this website !""",
-        "tags": ["API handling", "Javascript", "Flask", "SQLite", "Crypto", "Devops"]
+        "tags": ["API handling", "Javascript", "Flask", "SQLite", "Crypto", "Devops"],
+        "github": "https://github.com/Tom-Bini/hybralerte",
+        "live": "https://hybralerte.rouplou.dev/"
     }
 ]
